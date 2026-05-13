@@ -1,7 +1,10 @@
 class MclLauncher < Formula
-  desc "A fully featured Minecraft launcher TUI"
-  homepage "https://github.com/objz/mcl"
+  desc "DEPRECATED — renamed to rmcl. Run: brew install objz/tap/rmcl"
+  homepage "https://github.com/objz/rmcl"
   version "0.2.4"
+
+  deprecate! date: "2026-05-13", because: "renamed to rmcl. Run: brew install objz/tap/rmcl"
+
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/objz/mcl/releases/download/v0.2.4/mcl-launcher-aarch64-apple-darwin.tar.xz"
