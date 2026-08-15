@@ -1,25 +1,25 @@
 class Rmcl < Formula
   desc "A fully featured Minecraft TUI launcher"
   homepage "https://github.com/objz/rmcl"
-  version "0.4.0"
+  version "0.4.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/objz/rmcl/releases/download/v0.4.0/rmcl-aarch64-apple-darwin.tar.xz"
-      sha256 "2933251c1c0f4bc9e4bb8ab79c3986e307fd9c78a1a6484f213885d44b049faa"
+      url "https://github.com/objz/rmcl/releases/download/v0.4.1/rmcl-aarch64-apple-darwin.tar.xz"
+      sha256 "28f48f403e3d55143bd7773b1ad3240ee4f6fa1840aec08f54b2e7a082e926e3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/objz/rmcl/releases/download/v0.4.0/rmcl-x86_64-apple-darwin.tar.xz"
-      sha256 "a1dc7f1f4e67b5b49114562f8d68064d8060012f86a87841ff444eb6a61a6e8a"
+      url "https://github.com/objz/rmcl/releases/download/v0.4.1/rmcl-x86_64-apple-darwin.tar.xz"
+      sha256 "40e0d5b40efa6da2f53a4a5ca0eba59ca53b50b25758f6fb2cc9b126f106cba2"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/objz/rmcl/releases/download/v0.4.0/rmcl-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6354fda2be6957612324fde90683f541472a6e103cdd99b987afad93d93fc0e9"
+      url "https://github.com/objz/rmcl/releases/download/v0.4.1/rmcl-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ba4310a66bab26d86d74ae7f37ce9c05a61ab2947111a33d3ac5500c09caf606"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/objz/rmcl/releases/download/v0.4.0/rmcl-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c9d697e687964692f66b2b5366113220eb4eef6999f6b9f029070f960b374e5c"
+      url "https://github.com/objz/rmcl/releases/download/v0.4.1/rmcl-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c8f7ceae3c02980eee51c3efe3fdc148d92203fda0d8081e8343c7d2322a25c1"
     end
   end
   license "GPL-3.0-only"
@@ -48,10 +48,18 @@ class Rmcl < Formula
   end
 
   def install
-    bin.install "rmcl" if OS.mac? && Hardware::CPU.arm?
-    bin.install "rmcl" if OS.mac? && Hardware::CPU.intel?
-    bin.install "rmcl" if OS.linux? && Hardware::CPU.arm?
-    bin.install "rmcl" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "rmcl"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "rmcl"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "rmcl"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "rmcl"
+    end
 
     install_binary_aliases!
 
