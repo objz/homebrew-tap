@@ -1,25 +1,25 @@
 class Rmcl < Formula
   desc "A fully featured Minecraft TUI launcher"
   homepage "https://github.com/objz/rmcl"
-  version "0.5.1"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/objz/rmcl/releases/download/v0.5.1/rmcl-aarch64-apple-darwin.tar.xz"
-      sha256 "1b24e218e1869e68ce2bfc372f08aa425dab04e46bed0e81cd73a434a344e077"
+      url "https://github.com/objz/rmcl/releases/download/v0.6.0/rmcl-aarch64-apple-darwin.tar.xz"
+      sha256 "e7ed33b0eaba423cf64e1e2bdf6729f241b4d63e434da09cbff68c50ec8f9801"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/objz/rmcl/releases/download/v0.5.1/rmcl-x86_64-apple-darwin.tar.xz"
-      sha256 "b6e1b311faedf40c4f3359625e1f5e72f9ec2262609d988e5ce816a388898e61"
+      url "https://github.com/objz/rmcl/releases/download/v0.6.0/rmcl-x86_64-apple-darwin.tar.xz"
+      sha256 "31df4a6e995a42075f946afff2f57a38bbeae55d993a30849e1d0bbb0e80dec4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/objz/rmcl/releases/download/v0.5.1/rmcl-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a39479809fe7fc6e7b6852664db87d3799774cce1545ca7780e4648f0a1b0dca"
+      url "https://github.com/objz/rmcl/releases/download/v0.6.0/rmcl-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "108ba02bb63d5c9eef61e0b6e6fd11e2a2f66d5005686176ab290145115c6816"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/objz/rmcl/releases/download/v0.5.1/rmcl-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "796f9a36eeb1e81b3f094a31ea8cbc09b1af2d9774659dc302ed96b9c6d84243"
+      url "https://github.com/objz/rmcl/releases/download/v0.6.0/rmcl-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "dfc67582d3c732007f378c82fa8f628546e22126a9fd4fc5c67fbe0edef971af"
     end
   end
   license "GPL-3.0-only"
